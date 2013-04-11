@@ -1,0 +1,16 @@
+module ChatApp {
+  interface ChatCallback {
+    void callback(in string message);
+  };
+  interface Chat {
+    string join(in ChatCallback objref, in string nick);
+    void post(in ChatCallback objref, in string nick, in string msg);
+    void list(in ChatCallback objref, in string nick);
+    void leave(in ChatCallback objref, in string nick);
+   
+    void play(in ChatCallback objref, in string nick, in string color);
+    void put(in ChatCallback objref, in string nick, in string pos);   
+    void leaveGame( in string nick);
+  };
+};
+ 
